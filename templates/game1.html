@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HiddenPassion</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+        <link rel="icon" href="../static/images/icon.png" type="image"/>
+        <style type="text/css">
+            body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
+
+            #content
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
+                padding-top: 0em;
+            }
+        </style>
+	    <script type="application/javascript">
+
+		function resizeIFrameToFitContent( iFrame ) {
+
+			iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+			iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+		}
+
+		window.addEventListener('DOMContentReady', function(e) {
+
+			var iFrame = document.getElementById( 'iFrame1' );
+			resizeIFrameToFitContent( iFrame );
+
+		// or, to resize all iframes:
+		var iframes = document.querySelectorAll("iframe");
+		for( var i = 0; i < iframes.length; i++) {
+			resizeIFrameToFitContent( iframes[i] );
+		}
+
+	} );
+
+</script>
+</head>
+<body>
+        <div id="content">
+                    <iframe id="" src = "http://canvasrider.com/tracks/356176" frameborder="0" scrolling="0"  style="overflow: inherit; height: 90%;width: 100%; position: absolute"></iframe>
+        </div>
+
+</body>
+</html>

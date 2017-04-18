@@ -62,5 +62,8 @@ def main():
 @app.route('/main')
 def main2():
     return  render_template('index.html')
+@app.route('/game1')
+def game1():
+    return  render_template('game1.html')
 if __name__ == '__main__':
     app.run()
